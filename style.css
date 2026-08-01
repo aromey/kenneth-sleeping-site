@@ -184,38 +184,48 @@ section { position: relative; }
   display: block;
 }
 
-/* ---- review ---- */
-.review {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 32px 100px;
+/* ---- reviews section ---- */
+.reviews {
+  background: var(--night);
+  padding: 100px 32px;
+}
+.reviews-inner { max-width: var(--max); margin: 0 auto; }
+.reviews h2 {
+  color: #fff;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  margin-bottom: 44px;
 }
 .review-card {
   display: flex;
   align-items: center;
   gap: 22px;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+  background: var(--night-soft);
+  border: 1px solid var(--line-dark);
   border-radius: var(--radius);
-  padding: 26px 30px;
+  padding: 30px 34px;
   max-width: 620px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.review-card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
 .review-photo {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid var(--dawn);
 }
 .review-quote {
-  font-size: 1rem;
-  color: var(--ink);
-  margin-bottom: 8px;
+  font-size: 1.02rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 .review-name {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--ink-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--dawn);
 }
 
 /* ============ Stats / Problem ============ */
