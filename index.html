@@ -1,18 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
-      <h1>Hello</h1>
-      <p>This page was created with HTML, CSS, and JavaScript.</p>
-      <button id="demoButton">Click me</button>
-    </main>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenny's Sleeping Services — Sleep Coaching</title>
+<meta name="description" content="One-on-one sleep coaching to diagnose what's breaking your sleep and rebuild it, night by night.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <script src="script.js"></script>
-  </body>
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Kenny's<span>Sleep</span></a>
+    <nav class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#process">Process</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#contact" class="btn btn-small">Book a consult</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#approach">Approach</a>
+    <a href="#process">Process</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="btn">Book a consult</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Sleep coaching &amp; consulting</p>
+      <h1>Better sleep isn't luck.<br>It's a <em>system.</em></h1>
+      <p class="hero-sub">Kenny works with you one-on-one to find exactly what's breaking your sleep — and rebuild it, night by night, until it holds on its own.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Start your sleep assessment</a>
+        <a href="#approach" class="btn btn-ghost">See how it works</a>
+      </div>
+    </div>
+
+    <div class="cycle-wrap" role="img" aria-label="24 hour sleep cycle timeline showing wind-down, deep sleep, REM, and wake phases">
+      <div class="cycle-labels">
+        <span>6PM</span><span>12AM</span><span>6AM</span><span>12PM</span><span>6PM</span>
+      </div>
+      <div class="cycle-track">
+        <div class="cycle-seg seg-wake" style="--start:0; --end:8.3"></div>
+        <div class="cycle-seg seg-wind" style="--start:8.3; --end:16.6"></div>
+        <div class="cycle-seg seg-deep" style="--start:16.6; --end:37.5"></div>
+        <div class="cycle-seg seg-rem" style="--start:37.5; --end:50"></div>
+        <div class="cycle-seg seg-wake2" style="--start:50; --end:100"></div>
+        <div class="cycle-dot" id="cycleDot"></div>
+      </div>
+      <div class="cycle-legend">
+        <span><i class="dot wake"></i>Awake</span>
+        <span><i class="dot wind"></i>Wind-down</span>
+        <span><i class="dot deep"></i>Deep sleep</span>
+        <span><i class="dot rem"></i>REM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM / STATS -->
+  <section class="stats" id="approach">
+    <div class="stats-inner">
+      <p class="eyebrow eyebrow-dark">The problem</p>
+      <h2>Most sleep advice treats the symptom.<br>Not the schedule.</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-num">01</span>
+          <p>You've tried the blackout curtains, the magnesium, the "no screens" rule — and you're still wide awake at 1am.</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">02</span>
+          <p>Generic sleep hygiene tips assume everyone's problem is the same. Yours has a specific cause — usually more than one.</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">03</span>
+          <p>What actually works is a plan built around your body's own rhythm, tested and adjusted week over week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <p class="eyebrow">The process</p>
+    <h2>Four steps. One rebuilt sleep system.</h2>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="tl-item">
+        <div class="tl-marker">01</div>
+        <div class="tl-content">
+          <h3>Assessment</h3>
+          <p>A deep-dive intake covering your schedule, environment, habits, and history — plus two weeks of sleep tracking to see the real pattern, not the remembered one.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-marker">02</div>
+        <div class="tl-content">
+          <h3>Custom plan</h3>
+          <p>Kenny builds a plan specific to what your data shows: timing shifts, wind-down structure, environment changes, and the habits worth actually keeping.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-marker">03</div>
+        <div class="tl-content">
+          <h3>Weekly check-ins</h3>
+          <p>Short sessions to review what's working, troubleshoot what isn't, and adjust the plan as your sleep responds — nothing set-and-forget.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-marker">04</div>
+        <div class="tl-content">
+          <h3>Sleep, on its own</h3>
+          <p>By the end, the system runs without coaching. You know your own rhythm well enough to keep it — and fix it if life knocks it off track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <p class="eyebrow">Services</p>
+    <h2>Pick your starting point.</h2>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Single Deep Dive</h3>
+        <p class="service-desc">One 90-minute session to map your sleep problem and leave with a concrete first plan.</p>
+        <p class="service-price">$220 <span>/ one session</span></p>
+        <ul class="service-list">
+          <li>90-minute intake &amp; assessment</li>
+          <li>Written sleep plan</li>
+          <li>One follow-up email check-in</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book this</a>
+      </div>
+
+      <div class="service-card featured">
+        <span class="badge">Most booked</span>
+        <h3>The Sleep Reset</h3>
+        <p class="service-desc">Four weeks of coaching to diagnose, rebuild, and stabilize your sleep system end to end.</p>
+        <p class="service-price">$680 <span>/ 4 weeks</span></p>
+        <ul class="service-list">
+          <li>Full assessment + sleep tracking review</li>
+          <li>Custom sleep plan</li>
+          <li>4 weekly 1:1 check-ins</li>
+          <li>Unlimited messaging support</li>
+        </ul>
+        <a href="#contact" class="btn">Book this</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Ongoing Coaching</h3>
+        <p class="service-desc">Monthly coaching for shift workers, new parents, or anyone whose schedule keeps moving.</p>
+        <p class="service-price">$240 <span>/ month</span></p>
+        <ul class="service-list">
+          <li>2 sessions per month</li>
+          <li>Plan updates as life changes</li>
+          <li>Priority messaging</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Book this</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual" aria-hidden="true">
+        <div class="about-frame"></div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow eyebrow-dark">About Kenny</p>
+        <h2>Sleep is trainable. Kenny treats it that way.</h2>
+        <p>Kenny has spent the last several years working with people who've tried everything — the apps, the supplements, the routines — and still weren't sleeping. His approach is less "relax more" and more "let's look at your actual data and fix what's broken."</p>
+        <ul class="about-facts">
+          <li>Certified sleep coach</li>
+          <li>Background in behavioral health coaching</li>
+          <li>Works with shift workers, new parents, and chronic insomniacs</li>
+          <li>1:1 coaching, not a course you forget about</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial">
+    <blockquote>
+      "I stopped trying to fix my sleep with willpower and started actually following a plan built for my schedule. Three weeks in, I was falling asleep in under fifteen minutes for the first time in years."
+    </blockquote>
+    <cite>— A Sleep Reset client</cite>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <p class="eyebrow">Get started</p>
+      <h2>Tell Kenny what's keeping you up.</h2>
+      <p class="contact-sub">Fill this out and you'll hear back within one business day to schedule your first session.</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@email.com">
+          </label>
+        </div>
+        <label>
+          <span>What's going on with your sleep?</span>
+          <textarea name="message" rows="4" required placeholder="Trouble falling asleep, waking up at odd hours, shift work schedule..."></textarea>
+        </label>
+        <button type="submit" class="btn">Send message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo">Kenny's<span>Sleep</span></a>
+    <p>&copy; <span id="year"></span> Kenny's Sleeping Services. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
