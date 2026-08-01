@@ -301,11 +301,11 @@ section { position: relative; }
 .tl-content p { color: var(--ink-soft); max-width: 520px; }
 
 /* ============ Services ============ */
-.services { max-width: var(--max); margin: 0 auto; padding: 0 32px 120px; }
+.services { max-width: var(--max); margin: 0 auto; padding: 100px 32px 120px; }
 .services h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); max-width: 600px; margin-bottom: 56px; }
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   align-items: stretch;
 }
@@ -338,7 +338,7 @@ section { position: relative; }
   border-radius: 999px;
 }
 .service-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
-.service-desc { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 20px; }
+.service-desc { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
 .service-price { font-family: var(--font-mono); font-size: 1.5rem; margin-bottom: 22px; }
 .service-price span { font-size: 0.85rem; color: var(--ink-soft); font-family: var(--font-body); }
 .service-card.featured .service-price span { color: rgba(255,255,255,0.6); }
