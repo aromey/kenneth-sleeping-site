@@ -171,68 +171,18 @@ section { position: relative; }
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* ---- signature element: 24hr cycle timeline ---- */
-.cycle-wrap {
-  background: var(--night);
+/* ---- signature element: Kenny's photo ---- */
+.hero-photo {
   border-radius: 20px;
-  padding: 36px 40px 28px;
-  color: #fff;
-}
-.cycle-labels {
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 14px;
-}
-.cycle-track {
-  position: relative;
-  height: 14px;
-  border-radius: 999px;
   overflow: hidden;
-  background: var(--night-soft);
+  background: var(--night);
 }
-.cycle-seg {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: calc(var(--start) * 1%);
-  width: calc((var(--end) - var(--start)) * 1%);
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.seg-wake, .seg-wake2 { background: var(--dawn-dim); }
-.seg-wind { background: var(--dawn); }
-.seg-deep { background: var(--teal); }
-.seg-rem { background: var(--teal-soft); }
-
-.cycle-dot {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  width: 20px; height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 4px rgba(255,255,255,0.15), 0 0 18px rgba(255,255,255,0.5);
-  animation: cycleMove 24s linear infinite;
-}
-@keyframes cycleMove {
-  0% { left: 0%; }
-  100% { left: 100%; }
-}
-.cycle-legend {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.7);
-}
-.cycle-legend span { display: flex; align-items: center; gap: 8px; }
-.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-.dot.wake { background: var(--dawn-dim); }
-.dot.wind { background: var(--dawn); }
-.dot.deep { background: var(--teal); }
-.dot.rem { background: var(--teal-soft); }
 
 /* ============ Stats / Problem ============ */
 .stats {
