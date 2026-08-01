@@ -195,6 +195,11 @@ section { position: relative; }
   font-size: clamp(1.8rem, 3.4vw, 2.6rem);
   margin-bottom: 44px;
 }
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
 .review-card {
   display: flex;
   align-items: center;
@@ -203,7 +208,6 @@ section { position: relative; }
   border: 1px solid var(--line-dark);
   border-radius: var(--radius);
   padding: 30px 34px;
-  max-width: 620px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .review-card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
@@ -471,5 +475,6 @@ section { position: relative; }
   .nav-mobile.open { display: flex; }
   .form-row { grid-template-columns: 1fr; }
   .hero { padding-top: 60px; }
+  .review-grid { grid-template-columns: 1fr; }
   .review-card { flex-direction: column; align-items: flex-start; text-align: left; }
 }
