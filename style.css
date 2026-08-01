@@ -184,6 +184,40 @@ section { position: relative; }
   display: block;
 }
 
+/* ---- review ---- */
+.review {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px 100px;
+}
+.review-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  max-width: 620px;
+}
+.review-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.review-quote {
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.review-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
 /* ============ Stats / Problem ============ */
 .stats {
   background: var(--night);
@@ -427,4 +461,5 @@ section { position: relative; }
   .nav-mobile.open { display: flex; }
   .form-row { grid-template-columns: 1fr; }
   .hero { padding-top: 60px; }
+  .review-card { flex-direction: column; align-items: flex-start; text-align: left; }
 }
